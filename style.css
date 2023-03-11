@@ -1,0 +1,189 @@
+:root{
+    --bd-cl:#dc2094;
+    --bd-rd : 20px;
+}
+body{
+    
+    min-height: 100vh;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/1021/419/667/stars-sky-night-sea-horizon-gray-sky-with-stars-over-the-ocean-wallpaper-preview.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    overflow: hidden;
+    z-index: -10;
+}
+.wrapper{
+    width:400px;
+    height:550px;
+    position: relative;
+    /* border:2px solid aqua; */
+    box-shadow: 0 0 4px 2px red;
+    border-radius: var(--bd-rd);
+    
+}
+
+.wrapper:after{
+    content: "";
+    width:100%;
+    height:120px;
+    position: absolute;
+    top:0;
+    z-index: 1;
+    border-top-left-radius: var(--bd-rd);
+    border-top-right-radius: var(--bd-rd);
+    
+    background-image: url('https://a-static.besthdwallpaper.com/forest-mountain-scenery-wallpaper-2400x1350-80940_50.jpg');
+    background-size: cover;
+}
+.wrapper::before {
+    content: "";
+    width: 100%;
+    height: 430px;
+    position: absolute;
+    bottom: 0;
+    background-color: aquamarine;
+    /* background: linear-gradient(105deg, #c2d613, #0dbda8, #0c9bd8,#dc2094); */
+    z-index: -100;
+    border-bottom-left-radius: var(--bd-rd);
+    border-bottom-right-radius: var(--bd-rd);
+    animation: animate linear 5s infinite;
+}
+@keyframes animate {
+    50% {
+        filter: hue-rotate(180deg);
+    }
+    100%{
+
+    }
+}
+.card{
+    width:350px;
+    padding:0 25px;
+}
+.wrapper .avt{
+    width:100%;
+    height:170px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.avt img{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    z-index: 10;
+    position: relative;
+}
+.avt:after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-left: 5px dashed var(--bd-cl);
+    border-top: 5px dashed #0dbda8;
+    border-right: 5px dashed #fff;
+    border-bottom: 5px dashed #0532ad;
+    position: absolute;
+    top: 65px;
+    z-index: 1000;
+    animation: rotate linear 1s infinite;
+}
+@keyframes rotate {
+    /* 25%{
+        transform: rotate(360deg);
+        filter: blur(135deg);
+        opacity: 0.5;
+    } */
+    100%{
+        transform: rotate(360deg);
+        filter:blur(135deg);
+        opacity: 1;
+    }
+}
+.wrapper .content {
+    width:100%;
+    height:115px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom:5px;
+}
+.wrapper .content h1{
+    margin:10px 0 10px 0;
+    position: relative;
+}
+.wrapper .content h1:after{
+    content: "Dev";
+    position: absolute;
+    transform: translate(0px,-2px);
+    transform: tr;
+    font-size: 10px;
+    background: rgb(14, 161, 141);
+    color:#fff;
+    padding:2px;
+}
+.wrapper .content p{
+    margin :5px 0 0 0 ;
+}
+.xh{
+    width:100%;
+    height:100px;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    margin-bottom:20px;
+    border-top:1px solid #12ae70;
+    border-top-width: 1px;
+}
+ul{
+    margin:0;
+    display: flex;
+    justify-content: space-evenly;
+}
+ul li{
+    width: 48px;
+    height:48px;
+    padding:10px;
+    transform:translateX(-20px);
+    list-style: none;
+    width:50px;
+}
+ul li a{
+    width: 48px;
+    height:48px;
+}
+.contact{
+    width:100%;
+    height:50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.contact a{
+    width:130px;
+    height:30px;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    background-color: #ecb80c;
+    padding:10px 15px;
+    transition:0.5s all;
+    border-radius: 10px;
+}
+.contact a:hover{
+    background: #12ae70;
+
+}
+#footer{
+    margin-top:20px;
+    height:50px;
+    text-align: center;
+}
+#footer #time{
+    text-align: center;
+    height:30px;
+    margin-bottom:0;
+}
